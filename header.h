@@ -4,6 +4,7 @@
 #include <mysql/mysql.h>
 #include <iostream>
 #include <string>
+#include <vector>
 #include <iomanip>
 #include <ctime>
 #include <limits>
@@ -19,14 +20,26 @@ struct connection_details
     string database = "library";
 };
 
-extern connection_details detail;
+struct libraryMember
+{
+    string id;
+    string first_name;
+    string last_name;
+};
+struct result
+{
+    vector<vector<string>>row;
+    vector<string> column;
+    vector<int> columntype;
+};
 
 extern MYSQL *connection;
-extern MYSQL_RES *res;	
-extern MYSQL_ROW row;	
-extern MYSQL_FIELD *field;
 
-MYSQL_RES* perform_query(MYSQL* connection, string sql_query);
+
+
+result perform_query(string sql_query);
 void connection_setup ();
+void library_member();
+string get_id(string mysql_function);
 
 #endif
