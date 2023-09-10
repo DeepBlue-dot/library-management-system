@@ -27,7 +27,8 @@
     "utility": "cpp",
     "variant": "cpp",
     "*.inc": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "iomanip": "cpp"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",

@@ -6,7 +6,7 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
+                "main",
                 "-I",
                 "/usr/include/mysql",
                 "-g",

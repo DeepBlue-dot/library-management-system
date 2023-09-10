@@ -16,13 +16,14 @@ int main(int argc, char *argv[])
     do
     {
         cout << "1.Library Member" << endl;
-        cout << "2.Librarian ID" << endl;
+        cout << "2.Librarian" << endl;
         cout << "3.Exite" << endl;
         cin >> choice;
         switch (choice)
         {
             case 1:
-                /* code */
+                system("clear");
+                library_member();
                 break;
             case 2:
                 /* code */
