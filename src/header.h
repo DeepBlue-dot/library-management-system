@@ -31,15 +31,16 @@ struct result
     vector<vector<string>>row;
     vector<string> column;
     vector<int> columntype;
+    int num_row;
+    int num_colum;
 };
 
-extern MYSQL *connection;
-
-
-
 result perform_query(string sql_query);
-void connection_setup (connection_details detail);
 void library_member();
 string get_id(string mysql_function);
+void recommendation();
+void browse();
+void search();
+void acount();
 
 #endif

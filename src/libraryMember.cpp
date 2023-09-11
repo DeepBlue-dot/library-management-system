@@ -13,25 +13,37 @@ void library_member()
 
     while (true)
     {
+        system("clear");
         cout << "Loged in as:" << endl;
-        cout << setw(4) << "Fist name : " <<  user.first_name << endl;
-        cout << setw(4) <<"last name : " <<  user.last_name << endl;
-        cout << setw(4) << "ID : " <<  user.id << endl;
+        cout << "Fist name : " <<  user.first_name << endl;
+        cout << "last name : " <<  user.last_name << endl;
+        cout << "ID : " <<  user.id << endl;
         cout << "1. Recommendation" << endl;
         cout << "2. Browse" << endl;
         cout << "3. search" << endl;
         cout << "4. acount" << endl;
+        cout << "5. exit" << endl;
         cin >> choice;
         switch (choice)
         {
             case 1:
-            
+                system("clear");
+                recommendation();
                 break;
             case 2:
-                
+                system("clear");
+                browse();
                 break;
             case 3:
-                
+                system("clear");
+                search();
+                break;
+            case 4:
+                system("clear");
+                acount();
+                break;
+            case 5:
+                exit(0);
                 break;
             
             default:

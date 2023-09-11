@@ -1,23 +1,15 @@
 #include "header.h"
 
-MYSQL_RES *res;
-MYSQL_ROW row;
-MYSQL_FIELD *field;
-MYSQL* connection;
-
-connection_details detail;
 
 
 int main(int argc, char *argv[])
 {
-    
-    connection_setup(detail);
     int choice;
     do
     {
         cout << "1.Library Member" << endl;
         cout << "2.Librarian" << endl;
-        cout << "3.Exite" << endl;
+        cout << "3.Exit" << endl;
         cin >> choice;
         switch (choice)
         {
@@ -29,7 +21,7 @@ int main(int argc, char *argv[])
                 /* code */
                 break;
             case 3:
-                /* code */
+                exit(0);
                 break;
             
             default:
