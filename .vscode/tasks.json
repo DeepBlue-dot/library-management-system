@@ -6,11 +6,11 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-o",
-                "main",
+                "${workspaceFolder}/bin/main",
                 "-I",
                 "/usr/include/mysql",
                 "-g",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/src/*.cpp",
                 "-L",
                 "/usr/lib/",
                 "-lmariadb"

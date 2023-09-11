@@ -38,7 +38,7 @@ extern MYSQL *connection;
 
 
 result perform_query(string sql_query);
-void connection_setup ();
+void connection_setup (connection_details detail);
 void library_member();
 string get_id(string mysql_function);
 

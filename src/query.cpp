@@ -7,6 +7,7 @@ result perform_query(string sql_query)
     MYSQL_FIELD *fields;
     result temp_result;
     int num_fields;
+    
     if (mysql_query(connection, sql_query.c_str()))
     {
         cout << "MySQL query error:\n" << mysql_error(connection);

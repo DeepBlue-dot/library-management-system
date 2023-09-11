@@ -11,7 +11,7 @@ connection_details detail;
 int main(int argc, char *argv[])
 {
     
-    connection_setup();
+    connection_setup(detail);
     int choice;
     do
     {

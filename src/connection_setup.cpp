@@ -1,7 +1,6 @@
 #include "header.h"
 
-
-void connection_setup ()
+void connection_setup (connection_details detail)
 {
     connection = mysql_init(NULL);
 
