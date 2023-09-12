@@ -1,6 +1,6 @@
 #include "header.h"
 
-void browse()
+void browse(libraryMember libmem)
 {
     int choice;
     do
@@ -14,10 +14,18 @@ void browse()
         if(cin >> choice)
         {
             system("clear");
-
             if (choice==1)
             {
-                /* code */
+                result res= perform_query("CALL get_history(" + libmem.id + ")" );
+                for (size_t i = 0; i < res.num_row; i++)
+                {
+                    for (size_t j = 1; j < res.num_colum; j++)
+                    {
+                        cout << res.column[j] << " \t:\t " << res.row[i][j] << endl;
+                    } 
+                }
+                
+
             }
             else if(choice ==2)
             {

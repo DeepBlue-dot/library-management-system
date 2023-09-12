@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <ctime>
 #include <limits>
-#include <map>
+
 
 using namespace std;
 
@@ -39,7 +39,7 @@ result perform_query(string sql_query);
 void library_member();
 string get_id(string mysql_function);
 void recommendation();
-void browse();
+void browse(libraryMember libmem);
 void search();
 void acount();
 

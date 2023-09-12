@@ -32,7 +32,7 @@ void library_member()
                 break;
             case 2:
                 system("clear");
-                browse();
+                browse(user);
                 break;
             case 3:
                 system("clear");
