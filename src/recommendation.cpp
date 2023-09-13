@@ -6,11 +6,7 @@ void recommendation()
     int choice;
     do
     {
-        for (size_t i = 0; i < res.num_row; i++)
-        {
-            cout << i+1 << "."<<res.row[i][0] << endl;
-        }
-        cout << "0.back" << endl;
+        res.dispaly_all_row();
 
         if(cin >> choice)
         {
@@ -20,16 +16,7 @@ void recommendation()
                 result res2= perform_query("CALL get_book_genre(\"" + res.row[choice-1][0] + "\")");
                 srand(time(0));
                 int randomIndex = rand() % res2.num_row;
-                for (size_t j = 1; j < res2.num_colum; j++)
-                {
-                    cout << res2.column[j] << " \t:\t " << res2.row[randomIndex][j] << endl;
-                } 
-                cout << "0.back" <<endl;
-                if (!(cin>>choice))
-                {
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                }       
+                res2.dispaly_one(randomIndex); 
                 break;
             }
             else if(choice==0)

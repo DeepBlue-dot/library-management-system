@@ -8,8 +8,8 @@ void library_member()
     
     result res= perform_query("CALL GetLibraryMember("+ user.id + ")");
 
-    user.first_name=res.row[0][0];
-    user.last_name=res.row[0][1];
+    user.first_name=res.row[0][1];
+    user.last_name=res.row[0][2];
 
     while (true)
     {
@@ -40,7 +40,7 @@ void library_member()
                 break;
             case 4:
                 system("clear");
-                acount();
+                acount(user);
                 break;
             case 5:
                 exit(0);

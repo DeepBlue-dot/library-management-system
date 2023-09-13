@@ -18,18 +18,7 @@ void browse(libraryMember libmem)
             if (choice==1)
             {
                 result res= perform_query("CALL get_history(" + libmem.id + ")" );
-                for (size_t i = 0; i < res.num_row; i++)
-                {
-                    for (size_t j = 1; j < res.num_colum; j++)
-                    {
-                        cout << res.column[j] << " \t:\t " << res.row[i][j] << endl;
-                    } 
-                }
-                if (!(cin>>choice))
-                {
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                }       
+                res.dispaly_all();    
             }
             else if(choice ==2)
             {
@@ -42,20 +31,7 @@ void browse(libraryMember libmem)
             else if(choice ==4)
             {
                 result res=perform_query("CALL all_book()");
-                for (size_t i = 0; i < res.num_row; i++)
-                {
-                    for (size_t j = 1; j < res.num_colum; j++)
-                    {
-                        cout << res.column[j] << " \t:\t " << res.row[i][j] << endl;
-                    } 
-                }
-                
-                cout << "0.back" <<endl;
-                if (!(cin>>choice))
-                {
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                }       
+                res.dispaly_all();      
                 break; 
             }   
             else if(choice ==0)

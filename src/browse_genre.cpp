@@ -6,31 +6,14 @@ void browse_gener()
     int choice;
     do
     {
-        for (size_t i = 0; i < res.num_row; i++)
-        {
-            cout << i+1 << "."<<res.row[i][0] << endl;
-        }
-        cout << "0.back" << endl;
+        res.dispaly_all_row();
 
         if (cin>>choice)
         {
             system("clear");
             if (choice <= res.num_row && choice >0)
             {
-                result res2= perform_query("CALL get_book_genre(\"" + res.row[choice-1][0] + "\")");
-                for (size_t i = 0; i < res2.num_row; i++)
-                {
-                    for (size_t j = 1; j < res2.num_colum; j++)
-                    {
-                        cout << res2.column[j] << " \t:\t " << res2.row[i][j] << endl;
-                    } 
-                }
-            
-                if (!(cin>>choice))
-                {
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                }       
+                res.dispaly_all();      
                 break;
             }
             else if(choice==0)
