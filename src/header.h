@@ -31,8 +31,8 @@ struct result
     vector<vector<string>>row;
     vector<string> column;
     vector<int> columntype;
-    int num_row;
-    int num_colum;
+    int num_row=0;
+    int num_colum=0;
 };
 
 result perform_query(string sql_query);
@@ -42,5 +42,11 @@ void recommendation();
 void browse(libraryMember libmem);
 void search();
 void acount();
+void browse_gener();
+void browse_auther();
+void search_by_id();
+void search_by_title();
+void search_by_isbn();
+void search_by_author();
 
 #endif
