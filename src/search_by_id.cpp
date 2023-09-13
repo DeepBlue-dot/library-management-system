@@ -22,6 +22,7 @@ void search_by_id()
                         {
                             cout << res2.column[j] << " \t:\t " << res2.row[i][j] << endl;
                         } 
+                        cout << endl;
                     }
                 }
                 else
