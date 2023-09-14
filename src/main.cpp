@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
                 library_member();
                 break;
             case 2:
-                /* code */
+                system("clear");
+                Librarian();
                 break;
             case 3:
                 exit(0);

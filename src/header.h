@@ -26,6 +26,14 @@ struct libraryMember
     string first_name;
     string last_name;
 };
+
+struct librarian
+{
+    string id;
+    string first_name;
+    string last_name;
+};
+
 struct result
 {
     vector<vector<string>>row;
@@ -128,17 +136,19 @@ struct result
 };
 
 result perform_query(string sql_query);
-void library_member();
 string get_id(string mysql_function);
+
+void library_member();
 void recommendation();
 void browse(libraryMember libmem);
 void search();
-void acount(libraryMember libmem);
 void browse_gener();
 void browse_auther();
 void search_by_id();
 void search_by_title();
 void search_by_isbn();
 void search_by_author();
+
+void Librarian();
 
 #endif

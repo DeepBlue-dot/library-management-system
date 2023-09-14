@@ -1,12 +1,12 @@
 #include "header.h"
 
-void library_member()
+void Librarian()
 {
     int choice;
-    libraryMember user;
-    user.id = get_id("SELECT check_librarymember_id(");
+    librarian user;
+    user.id = get_id("SELECT check_librarian(");
     
-    result res= perform_query("CALL GetLibraryMember("+ user.id + ")");
+    result res= perform_query("CALL get_librarian("+ user.id + ")");
 
     user.first_name=res.row[0][1];
     user.last_name=res.row[0][2];
@@ -28,27 +28,20 @@ void library_member()
         {
             case 1:
                 system("clear");
-                recommendation();
                 break;
             case 2:
                 system("clear");
-                browse(user);
                 break;
             case 3:
                 system("clear");
-                search();
                 break;
             case 4:
-                {
-                    system("clear");
-                    result res2= perform_query("CALL GetLibraryMember("+ user.id + ")");
-                    res2.dispaly_all();
-                }
+                system("clear");
                 break;
             case 5:
                 exit(0);
                 break;
-            
+        
             default:
                 cout << "Invalid Input" << endl;
                 cin.clear();
