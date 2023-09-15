@@ -16,19 +16,19 @@ void Library_Member_Managment()
             system("clear");
             if (choice==1)
             {
-                
+                Add_Library_Member();
             }
             else if(choice ==2)
             {
-                
+                Editi_Library_Member();
             }
             else if(choice ==3)
             {
-                
+                Remove_Library_Member();
             }
             else if(choice ==4)
             {
-            
+                Search_Library_Member();
                 break; 
             }   
             else if(choice ==0)

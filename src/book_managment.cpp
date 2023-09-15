@@ -11,27 +11,38 @@ void Book_Managment()
         cout << "3. Add a copy" << endl;
         cout << "4. Editi a copy" << endl;
         cout << "5. Search a book" << endl;
+        cout << "6. Search a copy" << endl;
         cout << "0. Back" << endl;
         if(cin >> choice)
         {
             system("clear");
             if (choice==1)
             {
-                
+                Add_a_book():
             }
             else if(choice ==2)
             {
-               
+               Edite_a_book():
             }
             else if(choice ==3)
             {
-               
+               Add_a_copy():
             }
             else if(choice ==4)
             {
-                    
+                Editi_a_copy():
                 break; 
             }   
+            else if(choice == 5)
+            {
+                Search_a_book(): 
+                break; 
+            }  
+            else if(choice == 6)
+            {
+                Search_a_copy(): 
+                break; 
+            }  
             else if(choice ==0)
             {
                 break;
