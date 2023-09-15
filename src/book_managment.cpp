@@ -18,29 +18,29 @@ void Book_Managment()
             system("clear");
             if (choice==1)
             {
-                Add_a_book():
+                Add_a_book();
             }
             else if(choice ==2)
             {
-               Edite_a_book():
+               Edite_a_book();
             }
             else if(choice ==3)
             {
-               Add_a_copy():
+               Add_a_copy();
             }
             else if(choice ==4)
             {
-                Editi_a_copy():
+                Editi_a_copy();
                 break; 
             }   
             else if(choice == 5)
             {
-                Search_a_book(): 
+                Search_a_book();
                 break; 
             }  
             else if(choice == 6)
             {
-                Search_a_copy(): 
+                Search_a_copy(); 
                 break; 
             }  
             else if(choice ==0)
