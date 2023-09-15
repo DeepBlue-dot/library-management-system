@@ -41,8 +41,7 @@ void library_member()
             case 4:
                 {
                     system("clear");
-                    result res2= perform_query("CALL GetLibraryMember("+ user.id + ")");
-                    res2.dispaly_all();
+                    res.dispaly_all();
                 }
                 break;
             case 5:

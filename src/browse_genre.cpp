@@ -13,7 +13,8 @@ void browse_gener()
             system("clear");
             if (choice <= res.num_row && choice >0)
             {
-                res.dispaly_all();      
+                result res2= perform_query("CALL get_book_genre(\"" + res.row[choice-1][0] + "\")");
+                res2.dispaly_all();      
                 break;
             }
             else if(choice==0)

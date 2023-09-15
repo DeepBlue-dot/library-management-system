@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 #include <iomanip>
 #include <ctime>
 #include <limits>
@@ -135,6 +136,24 @@ struct result
 
 };
 
+struct book
+{
+    map<string, string> info;
+    void load_book_info(result res)
+    {
+        for (size_t i = 0; i < res.num_colum; i++)
+        {
+            info[res.column[i]] = res.row[0][i];
+        }
+        
+    }
+    void update_book_info()
+    {
+        
+    }
+};
+
+
 result perform_query(string sql_query);
 string get_id(string mysql_function);
 
@@ -150,5 +169,9 @@ void search_by_isbn();
 void search_by_author();
 
 void Librarian();
+void Book_Managment();
+void Library_Member_Managment();
+void Transaction();
+
 
 #endif

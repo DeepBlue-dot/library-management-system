@@ -44,11 +44,7 @@ string get_id(string mysql_function)
                     system("clear");
                     cout << "Invalid password" << endl;
                 }   
-                else
-                {
-                    system("clear");
-                    cout << "something went wrong" << endl;
-                }  
+
             }      
         }
     }
