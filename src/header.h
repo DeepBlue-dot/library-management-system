@@ -172,12 +172,12 @@ void Librarian();
 void Book_Managment();
 void Library_Member_Managment();
 void Transaction();
-void Add_a_book():
-void Edite_a_book():
-void Add_a_copy():
-void Editi_a_copy():
-void Search_a_book():
-void Search_a_copy():
+void Add_a_book();
+void Edite_a_book();
+void Add_a_copy();
+void Editi_a_copy();
+void Search_a_book();
+void Search_a_copy();
 
 void Add_Library_Member();
 void Editi_Library_Member();
